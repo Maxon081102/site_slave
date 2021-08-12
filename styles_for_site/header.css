@@ -5,7 +5,10 @@
   height: auto;
 
 }
-
+.but_{
+  text-align:center;
+  font-size:4vw;
+}
 .city{
   background-color: black;
   color: white;
@@ -45,16 +48,21 @@ table {
     width: 100%;
 
 }
+.set{
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+
 .btn {
   position: relative;
   border: 2px solid black;
   display: inline-block;
   width: 19%;
   height: auto;
-  margin: 40px;
+  margin: 10px;
   background-color: white;
   color: black;
-  padding: 14px 28px;
+  padding: 5px 5px;
   font-size:3vw;
   cursor: pointer;
 }

@@ -10,11 +10,13 @@
         float: left;
 }
 .q{
+  text-align: center;
   margin: 20 auto 2;
-  background-color: #D3D3D3;
-  border: 5px solid #000000;
+  background-color: #ffffff;
+  border: 5px solid #ffffff;
 
 }
 .text_{
+  text-align: center;
   font-size:1vw;
 }

@@ -21,13 +21,18 @@
 }
 .job{
   text-align: center;
-  font-size:5vw;
-  border: 10px solid black
+  font-size:2vw;
+  border: 3px solid black
 }
 .text{
   text-align: center;
-  font-size:4vw;
-  margin: 25px 25px 25px 25px;
+  font-size:1.5vw;
+  margin: 15px 15px 15px 15px;
+}
+.text_end{
+  text-align: center;
+  font-size:2.5vw;
+  margin: 0px 0px 0px 0px;
 }
 table, td {
   text-align:center;
@@ -77,12 +82,12 @@ table {
   color: white;}
 .info-2 {
     font-size:2vw;
-    border-color: #FFD700;
-    color: #FFD700
+    border-color: #008000;
+    color: #008000
   }
 .info-2:hover {
     font-size:2vw;
-    background: #FFD700;
+    background: #008000;
     color: white;}
 .info_3 {
       font-size:2vw;

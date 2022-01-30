@@ -26,8 +26,13 @@
 }
 .text{
   text-align: center;
-  font-size:1.5vw;
-  margin: 15px 15px 15px 15px;
+  font-size:1.4vw;
+  margin: 10px 10px 10px 10px;
+}
+.text_1{
+  text-align: center;
+  font-size:1.9vw;
+  margin: 10px 10px 10px 10px;
 }
 .text_end{
   text-align: center;
@@ -60,51 +65,51 @@ table {
 
 .btn {
   position: relative;
-  border: 2px solid black;
+  border: 4px solid black;
   display: inline-block;
   width: 19%;
   height: auto;
   margin: 10px;
   background-color: white;
   color: black;
-  padding: 5px 5px;
-  font-size:3vw;
+  padding: 2px 2px;
+  font-size:2vw;
   cursor: pointer;
 }
 .info-1 {
-  font-size:2vw;
+  font-size:3vw;
   border-color: #2196F3;
   color: dodgerblue
 }
 .info-1:hover {
-  font-size:2vw;
+  font-size:3vw;
   background: #2196F3;
   color: white;}
 .info-2 {
-    font-size:2vw;
+    font-size:3vw;
     border-color: #008000;
     color: #008000
   }
 .info-2:hover {
-    font-size:2vw;
+    font-size:3vw;
     background: #008000;
     color: white;}
 .info_3 {
-      font-size:2vw;
+      font-size:3vw;
       border-color: #FF4500;
       color: #FF4500
     }
 .info_3:hover {
-      font-size:2vw;
+      font-size:3vw;
       background: #FF4500;
       color: white;}
 .info_4 {
-        font-size:2vw;
+        font-size:3vw;
         border-color: #8B008B;
         color: #8B008B
       }
 .info_4:hover {
-        font-size:2vw;
+        font-size:3vw;
         background: #8B008B;
         color: white;}
 

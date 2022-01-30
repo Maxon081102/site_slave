@@ -89,7 +89,7 @@ background: #333;}
 color: #FFFFFF;
 text-align: right;
 line-height: 50px;
-font-size:1.5vw;
+font-size:3vw;
 }
 
 
@@ -144,7 +144,7 @@ line-height: 50px;
   clear: both;
   display: table;
   max-width: 100%;*/
-  margin: 50 auto 50;
+  margin: 10 auto 10;
   padding: 0;
   width: 80%;
   height: auto;
@@ -157,5 +157,5 @@ line-height: 50px;
 .textr{
   text-align: center;
   font-size:2vw;
-  margin: 15px 15px 15px 15px;
+  margin: 5px 5px 5px 5px;
 }

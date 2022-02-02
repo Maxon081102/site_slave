@@ -1,0 +1,19 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.img1 {
+    float: right;
+}
+.img2 {
+        float: left;
+}
+.q{
+  background-color: #D3D3D3;
+  border: 5px solid #000000;
+
+}
+.text_{
+  font-size:1vw;
+}

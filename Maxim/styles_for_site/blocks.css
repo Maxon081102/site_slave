@@ -1,0 +1,22 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.img1 {
+    float: right;
+}
+.img2 {
+        float: left;
+}
+.q{
+  text-align: center;
+  margin: 20 auto 2;
+  background-color: #ffffff;
+  border: 5px solid #ffffff;
+
+}
+.text_{
+  text-align: center;
+  font-size:1vw;
+}

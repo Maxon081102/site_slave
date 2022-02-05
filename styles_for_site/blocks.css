@@ -4,10 +4,35 @@
     display: table;
 }
 .img1 {
-    float: right;
+    float: center;
+    width: 100%;
+    height:"auto";
 }
 .img2 {
-        float: left;
+        float: center;
+        width: 100%;
+        height:"auto";
+}
+.img3 {
+        float: center;
+        width: 60%;
+        height:"auto";
+}
+
+@media (max-width:600px){
+  .img3 {
+          float: center;
+          width: 100%;
+          height:"auto";
+  }
+}
+
+@media (max-width:320px) {
+  .img3 {
+          float: center;
+          width: 100%;
+          height:"auto";
+  }
 }
 .q{
   text-align: center;

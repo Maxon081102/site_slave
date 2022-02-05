@@ -6,12 +6,28 @@
   <link rel="stylesheet" href="styles_for_site/header.css">
   <link rel="stylesheet" href="styles_for_site/bar.css">
   <link rel="stylesheet" href="styles_for_site/blocks.css">
+  <link rel="stylesheet" href="styles_for_site/text.css">
+  <link rel="stylesheet" href="styles_for_site/switch.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="styles_for_site/IMG_38C92837CA86-1.svg" color="#660099">
   <link rel="icon" href="styles_for_site/IMG_38C92837CA86-1.png" color="#660099">
   <link rel="mask-icon" href="styles_for_site/IMG_38C92837CA86-1.svg" color="#660099">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <meta charset="utf-8">
+  <title></title>
+
+
+
   <style type="text/css">
   body {
    background-color: cyan;
@@ -34,6 +50,17 @@
    <style>
     section h2 {
      font-size: 3vw; /* Размер заголовка */
+    }
+    @media (max-width:600px){
+      section h2 {
+       font-size: 5.5vw; /* Размер заголовка */
+      }
+    }
+
+    @media (max-width:320px) {
+      section h2 {
+       font-size: 5.5vw; /* Размер заголовка */
+      }
     }
     section div {
      font-size: 2vw; /* Размер текста */
@@ -59,18 +86,129 @@
 
 </head>
 <body style="background-color: white">
-  <section>
-    <img class="header-image" src="styles_for_site/IMG_1736.jpg">
-    <div class="city">
-      <font face="Tahoma">
-  Санкт-Петербург и Ленинградская область
-<font>
-      <div>
-  </section>
+
+<div class="recer">
+  <div class="text_cc">
+    <font face="Tahoma">
+  Санкт-Петербург и Ленинградская область.
+  </font>
+</div>
+</div>
+
+  <script src="js/jssor.slider-22.2.6.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      jssor_1_slider_init = function() {
+
+          var jssor_1_options = {
+            $AutoPlay: true,
+            $SlideDuration: 800,
+            $SlideEasing: $Jease$.$OutQuint,
+            $ArrowNavigatorOptions: {
+              $Class: $JssorArrowNavigator$
+            },
+            $BulletNavigatorOptions: {
+              $Class: $JssorBulletNavigator$
+            }
+          };
+
+          var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+          /*responsive code begin*/
+          /*you can remove responsive code if you don't want the slider scales while window resizing*/
+          function ScaleSlider() {
+              var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+              if (refSize) {
+                  refSize = Math.min(refSize, 1920);
+                  jssor_1_slider.$ScaleWidth(refSize);
+              }
+              else {
+                  window.setTimeout(ScaleSlider, 30);
+              }
+          }
+          ScaleSlider();
+          $Jssor$.$AddEvent(window, "load", ScaleSlider);
+          $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+          $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+          /*responsive code end*/
+      };
+  </script>
+  <style>
+      /* jssor slider bullet navigator skin 05 css */
+      /*
+      .jssorb05 div           (normal)
+      .jssorb05 div:hover     (normal mouseover)
+      .jssorb05 .av           (active)
+      .jssorb05 .av:hover     (active mouseover)
+      .jssorb05 .dn           (mousedown)
+      */
+      .jssorb05 {
+          position: absolute;
+      }
+      .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+          position: absolute;
+          /* size of bullet elment */
+          width: 16px;
+          height: 16px;
+          background: url('img/b05.png') no-repeat;
+          overflow: hidden;
+          cursor: pointer;
+      }
+      .jssorb05 div { background-position: -7px -7px; }
+      .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+      .jssorb05 .av { background-position: -67px -7px; }
+      .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+      .jssora22l, .jssora22r {
+          display: block;
+          position: absolute;
+          /* size of arrow element */
+          width: 40px;
+          height: 58px;
+          cursor: pointer;
+          background: url('img/a22.png') center center no-repeat;
+          overflow: hidden;
+      }
+      .jssora22l { background-position: -10px -31px; }
+      .jssora22r { background-position: -70px -31px; }
+      .jssora22l:hover { background-position: -130px -31px; }
+      .jssora22r:hover { background-position: -190px -31px; }
+      .jssora22l.jssora22ldn { background-position: -250px -31px; }
+      .jssora22r.jssora22rdn { background-position: -310px -31px; }
+      .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+      .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+  </style>
+  <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:900px;overflow:hidden;visibility:hidden;">
+      <!-- Loading Screen -->
+      <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+          <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+          <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+      </div>
+      <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:900;overflow:hidden;">
+          <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
+          <div>
+              <img data-u="image" src="styles_for_site/IMG_2339.jpg" />
+              <div style="position:absolute;top:30px;left:30px;width:480px;height:120;z-index:0;font-size:50px;color:#ffffff;line-height:60px;"></div>
+              <div style="position:absolute;top:300px;left:30px;width:480px;height:120;z-index:0;font-size:30px;color:#ffffff;line-height:38px;"></div>
+          </div>
+          <div>
+              <img data-u="image" src="styles_for_site/IMG_2337.JPG" />
+          </div>
+      </div>
+      <!-- Bullet Navigator -->
+      <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+          <!-- bullet navigator item prototype -->
+          <div data-u="prototype" style="width:16px;height:16px;"></div>
+      </div>
+      <!-- Arrow Navigator -->
+      <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+      <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+  </div>
+  <script type="text/javascript">jssor_1_slider_init();</script>
+
+
   <section >
     <h1 class="job">Какие виды работ мы выполняем:</h1>
     <div class="text_1">1)Изготовление каркаса ворот</div>
-    <div class="text_1">2)Монтаж ворот на бетонный и свайный фундаменты</div>
+    <div class="text_1">2)Монтаж откатных шлагбаумов и ворот на различных фундаментах</div>
     <div class="text_1">3)Монтаж автоматики и дополнительного оборудования:</div>
     <div class="text_1">подключение, настройка, пуско-наладочные работы</div>
   </section>
@@ -79,7 +217,7 @@
     Качественно <br>и<br> вовремя
       </button>
     <button class="btn info-2">
-      Гарантия<br> 10<br> лет
+      Гарантия<br> 5<br> лет
       </button>
     <button class="btn info_3">
         Работаем <br>без<br> предоплаты
@@ -87,28 +225,10 @@
     <button class="btn info_4">
       Мастер <br>всегда<br> на связи
       </button>
-    <!--
-    <table>
-  <tr>
-    <td>Преимущество номер 1</td>
-    <td>Преимущество номер 2</td>
-  </tr>
-  <tr>
-    <td>Преимущество номер 3</td>
-    <td>Преимущество номер 4</td>
-  </tr>
-</table>-->
-
   </section>
 
     <ul>
   <li><a href="https://t.me/ArtemA178">telegram</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">+7(909) 097-30-70</a>
-    <div class="dropdown-content">
-      <a href="#">+77777777777</a>
-    </div>
-  </li>
 </ul>
 
 
@@ -118,7 +238,7 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/Snapseed 2.jpg" border=10px solid=#333>
   <div class="textr">
-  <p>Ворота на свайном фундаменте без автоматики, монтаж за 1 день</p>
+  <p>Ворота на сваях 4х2 метра на балке до 500 кг рублей (монтаж за 1 день).<br>От 75000 рублей</p>
 </div>
 </div>
 </section>
@@ -127,7 +247,10 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/Snapseed 4.jpg" border=10px solid=#333>
   <div class="textr">
-  <p>Ворота и калитка  на бетонном фундаменте с обшивкой профлистом, автоматикой и датчиками, монтаж за 2 дня: 1 день монтаж бетонного фундамента с армированием и закладным швеллером; 2 день монтаж и обшивка ворот, с монтажом автоматики, датчиков, пуско-наладочные работы и настройка</p>
+  <p>Ворота 4х2 метра на балке до 500 кг с итальянской автоматикой и калитка  на бетонном фундаменте
+    с обшивкой профлистом, автоматикой и датчиками, монтаж за 2 дня: 1 день монтаж бетонного фундамента с армированием и
+    закладным швеллером; 2 день монтаж и обшивка ворот, с монтажом автоматики, датчиков, пуско-наладочные работы и настройка.
+  <br>От 115000 рублей</p>
 </div>
 </div>
 </section>
@@ -136,7 +259,9 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/Snapseed 3.jpg" border=10px solid=#333>
   <div class="textr">
-  <p>Ворота на бетонном фундаменте с автоматикой и датчиками, обшивкой евроштакетником с 2 сторон</p>
+  <p>Ворота на балке до 500 кг на бетонном фундаменте с автоматикой и датчиками,
+    обшивкой евроштакетником с 2 сторон.
+  <br>От 115000 рублей</p>
 </div>
 </div>
 </section>
@@ -145,7 +270,9 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/Snapseed.jpg" border=10px solid=#333>
   <div class="textr">
-  <p>Ворота и калитка с обшивкой деревом в горизонтальном положении на готовый фундамент и каменные столбы монтаж и обшивка за 1 день</p>
+  <p>Ворота 4х2 Метра на бетонном фундаменте на балке до 800 кг
+    под обшивку деревом, с автоматикой и калитка.
+    <br>От 135000 рублей</p>
 </div>
 </div>
 </section>
@@ -154,7 +281,10 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/IMG_3602.JPG" border=10px solid=#333>
   <div class="textr">
-  <p>Откатные Ворота с калиткой внутри на бетонном фундаменте с автоматикой, обшивка евроштакетником в 2 цветном варианте, обшиты штакетником изнутри в цвет каркаса</p>
+  <p>Откатные Ворота 4х2 метра на балке до 500 кг с калиткой внутри на бетонном
+    фундаменте с автоматикой, обшивка евроштакетником в 2 цветном варианте,
+    обшиты штакетником изнутри в цвет каркаса.
+  <br>От 130000 рублей</p>
 </div>
 </div>
 </section>
@@ -163,7 +293,9 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/IMG_3605.JPG" border=10px solid=#333>
   <div class="textr">
-  <p>Откатные Ворота, на свайном фундаменте проем 5 метров, с обшивкой 2 х сторонним профлистом с 1 стороны</p>
+  <p>Откатные Ворота 5х2 метра на балке до 500 кг, на свайном фундаменте проем
+    5 метров, с обшивкой 2 х сторонним профлистом с 1 стороны.
+  <br>От 115000 рублей</p>
 </div>
 </div>
 </section>
@@ -172,7 +304,9 @@
 <div class="serphot"><div class="inner-div"></div>
   <img class="serphot" src="styles_for_site/1.jpg" border=10px solid=#333>
   <div class="textr">
-  <p>Откатные кованные  Ворота с забором на бетонной ленте, обшивка профлистом, автоматика BFT с датчиками безопасности</p>
+  <p>Откатные кованные  Ворота с забором на бетонной ленте, обшивка профлистом,
+    автоматика BFT с датчиками безопасности.
+  <br>Стоимость рассчитывается индивидуально</p>
 </div>
 </div>
 </section>
@@ -180,36 +314,181 @@
 
 <div class="pust"></div>
 
-<div class="recf"></div>
 
-<section >
-  <div class="clearfix q text_">
-  <img class="img2" src="styles_for_site/IMG_2268.JPG" width="100%" height="auto">
+
+<div class="pust"></div>
+
+
+
+
+<div class="recfc"></div>
+
+<div class="info">
+  <input id="info__body_1" class="info__switch" type="checkbox">
+  <label for="info__body_1" class="info__headline">Процесс</label>
+  <div class="info__body">
+  <section >
+    <div class="clearfix q text_">
+    <img class="img2" src="styles_for_site/IMG_2268.JPG">
+    <div class="pust"></div>
+    <div class="textra">
+        <h2>ЭТАПЫ МОНТАЖА ОТКАТНЫХ ВОРОТ :</h2>
+        <b>(1)</b>Выезд на замеры и заключение договора<br>
+        <b>(2)</b>Выезд на монтаж бетонного основания для ворот <br>
+        <b>(3)</b>Выезд на монтаж ворот и автоматики <br>
+        <b>(4)</b>Ворота на свайном фундаменте монтируются за 1 день<br>
+        <br>
+        <b>Изготовление ворот производится в оборудованном цеху на
+          профессиональном оборудовании, с использованием комплектующих «Алютех»
+           и «Ролтек» окраска ворот в порошковой камере</b>
+  </div>
   <div class="pust"></div>
-  <div class="textra">
-      Сначала мы выезжаем на замеры и заключение договора, если заключили договор, то выезд входит в стоимость договора, либо бесплатный выезд в день попутных работ.
+  </div>
+  </section>
+</div>
+
+</div>
+
+<div class="recfc"></div>
+<div class="pust"></div>
+<div class="recfc"></div>
+
+<div class="info">
+  <input id="info__body_2" class="info__switch" type="checkbox">
+  <label for="info__body_2" class="info__headline">Подробнее об откатных воротах</label>
+  <div class="info__body">
+  <section >
+    <div class="clearfix q text_">
+    <img class="img1" src="styles_for_site/2022-02-05 15.45.01.jpg">
+    <div class="pust"></div>
+    <div class="textra">Ворота этого типа, с калиткой или без нее, можно увидеть
+       на дачных участках, территориях загородных домов, складских и
+       коммерческих помещений, объектов промышленного назначения. Откатные
+       ворота для дачи или коттеджа открывают проем для въезда машины путем
+       сдвигания створки вбок. Установка автоматики позволяет сделать ворота
+       более удобными в использовании.<br>
+        <br>Основные элементы конструкции:<br>
+        <b>Каркас.</b> Для его изготовления используется швеллер для
+        направляющей балки, профтруба 60х30 мм и 40х20 мм — для рамы, труба 40х20 мм — для откосов.<br>
+        <b>Роликовый механизм.</b>Опорная балка с роликами принимает на себя
+        серьезные вертикальные и горизонтальные нагрузки — ветровую, снеговую,
+        вес самой конструкции. Для ее установки заливают бетонную тумбу размером
+         2х1,5 м, на которую и монтируют сам роликовый механизм.<br>
+        <b>Двигатель.</b>Раздвижные ворота для дачи или частного дома
+        комплектуются итальянским двигателем Came.<br>
+        Популярность сдвижных конструкций объясняется их функциональностью,
+        большим выбором конструкций, возможностью выбора материала для полотна.
+  <br><br>
+  Ворота откатного типа бывают:<br>
+    <b>Подвесными.</b>Чаще всего они устанавливаются на предприятиях, складах,
+    ангарах. Направляющая балка расположена вверху, на высоте 3-5 м. Передвижение
+     створки осуществляется с помощью роликовых тележек. Нижняя часть полотна не
+      имеет контакта с поверхностью земли. Недостатком можно считать
+      ограниченную пропускную способность для машин с высоким кузовом.<br>
+    <b>Рельсовыми.</b> К нижней части створки привариваются ролики чтобы она
+    могла передвигаться по рельсу, который укладывается по всей ширине проема
+    заподлицо с покрытием. Поскольку полотно имеет опору и не провисает проем
+    может иметь любую ширину. Минус такой конструкции в том, что необходимо
+    держать рельс чистым, регулярно убирать с его поверхности листву, грязь,
+    снег, лед.<br>
+    <b>Консольными.</b>Основа конструкции — направляющая балка, которая
+    приваривается снизу, сверху или посередине полотна. Работу устройства
+    обеспечивают роликовые тележки. Для уравновешивания веса полотна длина
+    направляющей балки должна быть в 1,5 раза длиннее ширины проема.
+    <h2>Преимущества откатных ворот</h2>
+    <b>Надежность конструкции.</b>Такие ворота имеют высокую прочность,
+    устойчивость к боковым нагрузкам. Роликовый механизм безотказно работает
+    независимо от времени года и температуры воздуха.<br>
+    <b>Экономия пространства.</b> Откатная створка не «съедает» пространство,
+    ставить машину можно вплотную к воротам.<br>
+    <b>Универсальность.</b>Их можно использовать для проема любой ширины.<br>
+    <b>Возможность автоматизации.</b>Чтобы открыть или закрыть створку ворот не
+    нужно выходить из машины, достаточно нажать на кнопку пульта.<br>
+    <b>Доступность.</b>Цена конструкции во многом зависит от материала полотна.
+    В нашей компании можно заказать откатные ворота на любой вкус и кошелек.<br>
+    <h2>Материалы для изготовления полотна</h2>
+    Мы изготавливаем сдвижные ворота из дерева, профнастила, металлоштакетника,
+     сетки-рабицы, сетки Гиттер, сэндвич-панелей. От выбора материала для
+     полотна зависит дизайн, функциональность и срок службы конструкции.<br><br>
+     Наиболее популярные материалы для обшивки откатной створки:<br>
+    <b>Профлист —</b>недорогой, неприхотливый в эксплуатации материал, который
+    имеет небольшой вес, характеризуется прочностью, износостойкостью,
+    устойчивостью к влаге, перепадам температуры, УФ-излучению.<br>
+    <b>Дерево —</b>экологически безопасный материал, обладающий высокими
+    декоративными качествами. Однако дерево требует регулярной обработки
+    поверхности от влаги, плесени, насекомых-вредителей.<br>
+    <b>Металлическое полотно —</b>имеет внушительный вес, отличается высокой
+    прочностью и длительным сроком службы.<br>
+    <b>Полотно из профтрубы с элементами ковки —</b>имеет оригинальный дизайн,
+    отличается большим запасом прочности и долговечности.<br>
+    <b>Сэндвич-панели —</b>используются для обшивки противопожарных и гаражных
+    ворот.
+  </div>
+  <div class="pust"></div>
+  </div>
+  </section>
+</div>
+
+</div>
+
+<div class="recfc"></div>
+<div class="pust"></div>
+<div class="recfc"></div>
+
+<div class="info">
+  <input id="info__body_3" class="info__switch" type="checkbox">
+  <label for="info__body_3" class="info__headline">Наши преимущества</label>
+  <div class="info__body">
+  <section >
+    <div class="textra">
+      Если заказать изготовление и установку забора и ворот у нас, то можно
+      сэкономить время и получить качественный забор за разумные деньги. Вам не
+      придется ездить по строительным базам и магазинам чтобы найти и купить
+      качественный профнастил, евроштакетник или сетку, искать машину и
+      грузчиков, нанимать случайных людей для строительства.
       <br><br>
-Если бетонный фундамент, то через 2-3 дня приезжаем и заливаем его. В течение 7 дней приезжаем и ставим Ворота. 2 оплаты: первая после фундамента, остальное в день монтажа ворот.
-<br><br>
-  Если  на сваях, то через дней 7 приезжаем и ставим Ворота за 1 день.
-<br><br>
-Изготовление ворот происходит в оборудованном цеху на профессиональном оборудовании, порошковая покраска, на профессиональных
-комплектующих “алютех”.
+Сотрудничать с нами удобно и выгодно, поэтому к нам часто обращаются по
+рекомендациям знакомых и родственников. Обратившись к нам вам потребуется только
+ выбрать понравившуюся модель забора или ворот, подписать договор и принять
+ готовую работу.
+ <br><br>
+ <b>•</b>Мы используем дополнительные нащельники для минимального зазора между
+ створкой ворот и столбами.<br>
+ <b>•</b>Крепление для зубчатой рейки – привариваем на производстве,
+ минимум ржавчины и привлекательный внешний вид<br>
+ <b>•</b>Все сварные швы после монтажа подкрашиваются в цвет ворот.<br>
+ <b>•</b>Гарантия 3 года на автоматику<br>
+ <b>•</b>Монтаж автоматики от производителей<br>
+
+  </div>
+  <div class="clearfix q text_">
+  <img class="img3" src="styles_for_site/4.jpg">
+  <div class="pust"></div>
+  <div class="pust"></div>
+  </div>
+  </section>
 </div>
-<div class="pust"></div>
+
 </div>
-</section>
-<div class="recf"></div>
+<div class="recfc"></div>
 <div class="pust"></div>
 
-<div class="text_end"><p>Мы поможем вам спрятать вашу территорию от лишних глаз и защитить от незваных гостей. Мы ставим заборы в СПб и Лен. области уже не первый год: знаем как правильно работать с почвой и делать долгоживущие заборы.<br>Ждем Ваших звонков!</p></div>
+<div class="text_end"><p>Мы поможем вам спрятать вашу территорию от лишних глаз
+   и защитить от незваных гостей. Мы ставим заборы в СПб и Лен. области уже не
+   первый год: знаем как правильно работать с почвой и делать долгоживущие
+   заборы.<br>Ждем Ваших звонков!</p></div>
 
+
+<hr class="recfca" />
 <div class="pust"></div>
-
-<div class="rec text_c">
-  "OOO ГАРАНТ"
+<div class="text_ca">+7(912)-807-2474</div>
+<div class="text_ca">+7(981)-984-1675</div>
+<div class="pust"></div>
+<div class="rec">
+  <div>
+  <div class="text_c">OOO "ГАРАНТ"</div>
 </div>
-
+</div>
 
 
 </html>

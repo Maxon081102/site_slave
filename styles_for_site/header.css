@@ -24,21 +24,29 @@
   font-size:2vw;
   border: 3px solid black
 }
-.text{
-  text-align: center;
-  font-size:1.4vw;
-  margin: 10px 10px 10px 10px;
+
+@media (max-width:600px){
+        .job{
+          font-size:5vw;
+          border: 2px solid black
+        }
+
+        section h2 {
+         font-size: 6vw; /* Размер заголовка */
+        }
 }
-.text_1{
-  text-align: center;
-  font-size:2.5vw;
-  margin: 10px 5px 10px 5px;
+
+@media (max-width:320px) {
+        .job{
+          font-size:5vw;
+          border: 1px solid black
+        }
+
+        section h2 {
+         font-size: 6vw; /* Размер заголовка */
+        }
 }
-.text_end{
-  text-align: center;
-  font-size:2.5vw;
-  margin: 0px 0px 0px 0px;
-}
+
 table, td {
   text-align:center;
     border: 5px solid black;
@@ -72,7 +80,7 @@ table {
   margin: 10px;
   background-color: white;
   color: black;
-  padding: 2px 2px;
+  padding: 4px 4px;
   font-size:2vw;
   cursor: pointer;
 }
@@ -111,8 +119,113 @@ table {
 .info_4:hover {
         font-size:3vw;
         background: #8B008B;
+        color: white;
+      }
+@media (max-width:600px){
+  .btn {
+    /*position: static;*/
+    position: relative;
+    border: 1px solid black;
+    width: 20%;
+    height: auto;
+    margin: 3px;
+    background-color: white;
+    color: black;
+    padding: 4px 4px;
+    font-size:4vw;
+    cursor: pointer;
+  }
+  .info-1 {
+    font-size:3vw;
+    border-color: #2196F3;
+    color: dodgerblue
+  }
+  .info-1:hover {
+    font-size:3vw;
+    background: #2196F3;
+    color: white;}
+  .info-2 {
+      font-size:3vw;
+      border-color: #008000;
+      color: #008000
+    }
+  .info-2:hover {
+      font-size:3vw;
+      background: #008000;
+      color: white;}
+  .info_3 {
+        font-size:3vw;
+        border-color: #FF4500;
+        color: #FF4500
+      }
+  .info_3:hover {
+        font-size:3vw;
+        background: #FF4500;
         color: white;}
+  .info_4 {
+          font-size:3vw;
+          border-color: #8B008B;
+          color: #8B008B
+        }
+  .info_4:hover {
+          font-size:3vw;
+          background: #8B008B;
+          color: white;
+        }
+        }
 
+@media (max-width:320px) {
+  .btn {
+    position: relative;
+    border: 1px solid black;
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    padding: 2px 2px;
+    font-size:2vw;
+    cursor: pointer;
+  }
+  .info-1 {
+    font-size:3vw;
+    border-color: #2196F3;
+    color: dodgerblue
+  }
+  .info-1:hover {
+    font-size:3vw;
+    background: #2196F3;
+    color: white;}
+  .info-2 {
+      font-size:3vw;
+      border-color: #008000;
+      color: #008000
+    }
+  .info-2:hover {
+      font-size:3vw;
+      background: #008000;
+      color: white;}
+  .info_3 {
+        font-size:3vw;
+        border-color: #FF4500;
+        color: #FF4500
+      }
+  .info_3:hover {
+        font-size:3vw;
+        background: #FF4500;
+        color: white;}
+  .info_4 {
+          font-size:3vw;
+          border-color: #8B008B;
+          color: #8B008B
+        }
+  .info_4:hover {
+          font-size:3vw;
+          background: #8B008B;
+          color: white;
+        }
+        }
 /*ul{
   position: relative;
   text-align: center;
